@@ -1,4 +1,11 @@
 #!/usr/bin/env python 
+"""makeouitable - download the oui table from the ieee and build a table of
+
+oui prefix, owner
+
+also, normalize spelling of common owners that have multiple spellings
+"""
+
 import os
 import httplib2
 import csv

@@ -1,3 +1,5 @@
+"""ua2os - from a user agent return operating system, architecture, and browser"""
+
 import sys,splunk.Intersplunk
 import re
 

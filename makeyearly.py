@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+"""makeyearly - collapse yearly data on top of itself for reporting multiple
+years on a single overlayed chart"""
+
 import sys,splunk.Intersplunk
 import datetime
 import time
