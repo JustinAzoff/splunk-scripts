@@ -1,5 +1,5 @@
 #!/usr/bin/env python 
-"""makeouitable - download the oui table from the ieee and build a table of
+"""make oui table - download the oui table from the ieee and build a table of
 
 oui prefix, owner
 

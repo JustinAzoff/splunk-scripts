@@ -1,4 +1,4 @@
-"""ip2subnet - truncate ip addresses to the /24 they are on"""
+"""ip to subnet - truncate ip addresses to the /24 they are on"""
 
 import sys,splunk.Intersplunk
 import re
