@@ -32,6 +32,7 @@ os_mapping = (
 )
 
 browser_mapping = (
+    ('MSIE 7.*Trident/4.0', 'Internet Explorer 8.0'),
     ('MSIE 7.0',            'Internet Explorer 7.0'),
     ('MSIE 8.0',            'Internet Explorer 8.0'),
     ('MSIE 6.0',            'Internet Explorer 6.0'),
