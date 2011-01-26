@@ -14,7 +14,7 @@ os_mapping = (
     ('OS X 10.4',           'MAC OS X 10.4.x'),
     ('OS X 10.3',           'MAC OS X 10.3.x'),
     ('SunOS',               'Solaris'),
-    ('Android',             'Android'),
+    ('droid',               'Android'),
     ('Linux ',              'Linux'),
     ('Windows',             'Windows - Other'),
     ('Skype for Macintosh', 'MAC OS X other'),
@@ -29,6 +29,7 @@ os_mapping = (
     ('MSIE 4.0;',           'Windows - Other'),
     ('Microsoft',           'Windows - Other'),
     ('Win32',               'Windows - Other'),
+    ('BlackBerry',          'BlackBerry'),
 )
 
 browser_mapping = (
@@ -58,10 +59,12 @@ arch_mapping = (
     ('x86_64',              'x64'),
     ('PPC',                 'PowerPC'),
     ('Power.{1,3}Macint',   'PowerPC'),
+    ('droid',               'android'),
     ('iPad',                'ipad'),
     ('iPod',                'ipod'),
     ('iPhone',              'iphone'),
     ('Intel',               'Intel'),
+    ('BlackBerry',          'BlackBerry'),
 )
 
 os_mapping      = [(re.compile(a, re.IGNORECASE),b) for (a,b) in os_mapping]
