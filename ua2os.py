@@ -64,9 +64,9 @@ arch_mapping = (
     ('Intel',               'Intel'),
 )
 
-os_mapping = [(re.compile(a),b) for (a,b) in os_mapping]
-browser_mapping = [(re.compile(a),b) for (a,b) in browser_mapping]
-arch_mapping = [(re.compile(a),b) for (a,b) in arch_mapping]
+os_mapping      = [(re.compile(a, re.IGNORECASE),b) for (a,b) in os_mapping]
+browser_mapping = [(re.compile(a, re.IGNORECASE),b) for (a,b) in browser_mapping]
+arch_mapping    = [(re.compile(a, re.IGNORECASE),b) for (a,b) in arch_mapping]
 
 def get_thing(line, mapping):
     for r, name in mapping:
