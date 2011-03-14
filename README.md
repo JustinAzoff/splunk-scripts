@@ -24,3 +24,7 @@ ua2os.py
 --------
 
 ua to os - from a user agent return operating system, architecture, and browser.
+
+addsemester.py
+--------------
+Add a semester field so you can report by semester.
