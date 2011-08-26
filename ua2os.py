@@ -35,8 +35,9 @@ os_mapping = (
 
 browser_mapping = (
     ('MSIE 7.*Trident/4.0', 'Internet Explorer 8.0'),
-    ('MSIE 7.0',            'Internet Explorer 7.0'),
+    ('MSIE 9.0',            'Internet Explorer 9.0'),
     ('MSIE 8.0',            'Internet Explorer 8.0'),
+    ('MSIE 7.0',            'Internet Explorer 7.0'),
     ('MSIE 6.0',            'Internet Explorer 6.0'),
     ('iPhone',              'Safari - mobile'),
     ('Safari/',             'Safari'),
@@ -44,7 +45,7 @@ browser_mapping = (
     ('Firefox/3',           'Firefox 3'),
     ('Firefox/2',           'Firefox 2'),
     ('MSIE 5.00',           'Internet Explorer 5.0'),
-    ('IE',                  'Internet Explorer - Other'),
+    ('MSIE',                'Internet Explorer - Other'),
     ('Chrome',              'Chrome'),
     ('AppleWebKit',         'Safari'),
     ('Google Update',       'Google Update'),
