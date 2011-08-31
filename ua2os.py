@@ -39,6 +39,7 @@ browser_mapping = (
     ('MSIE 8.0',            'Internet Explorer 8.0'),
     ('MSIE 7.0',            'Internet Explorer 7.0'),
     ('MSIE 6.0',            'Internet Explorer 6.0'),
+    ('droid',               'Android'),
     ('iPhone',              'Safari - mobile'),
     ('Safari/',             'Safari'),
     ('iTunes',              'iTunes'),
