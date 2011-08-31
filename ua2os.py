@@ -52,6 +52,7 @@ browser_mapping = (
     ('Firefox/1',           'Firefox 1'),
     ('Opera',               'Opera'),
     ('urlgrabber/.* yum',   'yum'),
+    ('BlackBerry',          'Blackberry'),
 )
 
 arch_mapping = (
