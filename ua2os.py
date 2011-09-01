@@ -34,7 +34,7 @@ browser_mapping = (
     ('MSIE ([9876]).0',     'Internet Explorer %s.0'),
     ('droid',               'Android'),
     ('Chrome',              'Chrome'),
-    ('iPhone',              'Safari - mobile'),
+    ('Mobile.*Safari',      'Safari - mobile'),
     ('Safari/',             'Safari'),
     ('iTunes',              'iTunes'),
     ('Firefox/(\d)',        'Firefox %s'),
