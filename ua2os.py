@@ -9,11 +9,7 @@ os_mapping = (
     ('Windows NT 6.0',      'Windows Vista'),
     ('Windows 6.0',         'Windows Server 2008'),
     ('Windows NT 6.1',      'Windows 7'),
-    ('OS X 10.7',           'MAC OS X 10.7.x'),
-    ('OS X 10.6',           'MAC OS X 10.6.x'),
-    ('OS X 10.5',           'MAC OS X 10.5.x'),
-    ('OS X 10.4',           'MAC OS X 10.4.x'),
-    ('OS X 10.3',           'MAC OS X 10.3.x'),
+    ('OS X 10.(\d)',        'MAC OS X 10.%s.x'),
     ('SunOS',               'Solaris'),
     ('droid',               'Android'),
     ('Windows',             'Windows - Other'),
@@ -35,25 +31,17 @@ os_mapping = (
 
 browser_mapping = (
     ('MSIE 7.*Trident/4.0', 'Internet Explorer 8.0'),
-    ('MSIE 9.0',            'Internet Explorer 9.0'),
-    ('MSIE 8.0',            'Internet Explorer 8.0'),
-    ('MSIE 7.0',            'Internet Explorer 7.0'),
-    ('MSIE 6.0',            'Internet Explorer 6.0'),
+    ('MSIE ([9876]).0',     'Internet Explorer %s.0'),
     ('droid',               'Android'),
     ('iPhone',              'Safari - mobile'),
     ('Safari/',             'Safari'),
     ('iTunes',              'iTunes'),
-    ('Firefox/6',           'Firefox 6'),
-    ('Firefox/5',           'Firefox 5'),
-    ('Firefox/4',           'Firefox 4'),
-    ('Firefox/3',           'Firefox 3'),
+    ('Firefox/(\d)',        'Firefox %s'),
     ('MSIE 5.00',           'Internet Explorer 5.0'),
     ('MSIE',                'Internet Explorer - Other'),
     ('Chrome',              'Chrome'),
     ('AppleWebKit',         'Safari'),
     ('Google Update',       'Google Update'),
-    ('Firefox/2',           'Firefox 2'),
-    ('Firefox/1',           'Firefox 1'),
     ('Opera',               'Opera'),
     ('urlgrabber/.* yum',   'yum'),
     ('BlackBerry',          'Blackberry'),
@@ -80,8 +68,9 @@ arch_mapping    = [(re.compile(a, re.IGNORECASE),b) for (a,b) in arch_mapping]
 
 def get_thing(line, mapping):
     for r, name in mapping:
-        if r.search(line):
-            return name
+        match = r.search(line)
+        if match:
+            return name % match.groups()
     return 'unknown'
 
 def get_ua_info(line):
