@@ -71,7 +71,10 @@ def get_thing(line, mapping):
     for r, name in mapping:
         match = r.search(line)
         if match:
-            return name % match.groups()
+            if '%' in name:
+                return name % match.groups()
+            else:
+                return name
     return 'unknown'
 
 def get_ua_info(line):
