@@ -35,7 +35,7 @@ browser_mapping = (
     ('droid',               'Android'),
     ('Chrome',              'Chrome'),
     ('Mobile.*Safari',      'Safari - mobile'),
-    ('i(pod|pad|phone).*Safari', 'Safari - mobile'),
+    ('i(pod|pad|phone).*(Safari|AppleWebKit)', 'Safari - mobile'),
     ('Safari/',             'Safari'),
     ('iTunes',              'iTunes'),
     ('Firefox/(\d)',        'Firefox %s'),
