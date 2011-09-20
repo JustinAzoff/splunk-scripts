@@ -1,4 +1,10 @@
-"""add_records - Add information to results about when a new record was reached"""
+"""add_records - Add information to results about when a new record was reached
+
+Usage:
+
+  foo | addrecords client_count | search record=*
+
+"""
 
 import sys,splunk.Intersplunk
 import re
@@ -16,7 +22,11 @@ try:
     for r in results:
         if field not in r:
             continue
-        value = r[field]
+        try :
+            value = float(r[field])
+        except ValueError:
+            continue
+
         if value > max:
             r['record'] = True
             r['since_record'] = since_record
