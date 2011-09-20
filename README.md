@@ -28,3 +28,11 @@ ua to os - from a user agent return operating system, architecture, and browser.
 addsemester.py
 --------------
 Add a semester field so you can report by semester.
+
+addrecords.py
+-------------
+Add information about record values
+
+ * record - Was this a record number for this value
+ * since_record - How many values have been since since the last record
+ * increase - The difference between the last record and the new record
