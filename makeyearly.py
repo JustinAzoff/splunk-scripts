@@ -1,6 +1,13 @@
 #!/usr/bin/env python
 """make yearly - collapse yearly data on top of itself for reporting multiple
-years on a single overlayed chart"""
+years on a single overlayed chart
+
+You can accomplish a similar thing with
+
+    | convert timeformat="%m-%d" ctime(_time) as  day | chart sum(clients) by day,date_year
+
+but if your data follows a monday-friday usage pattern, this chart will not look right
+"""
 
 import sys,splunk.Intersplunk
 import datetime

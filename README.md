@@ -35,4 +35,6 @@ Add information about record values
 
  * record - Was this a record number for this value
  * since_record - How many values have been since since the last record
+ * last_record - The time of the last record
+ * consecutive_records - The number of records in a row
  * increase - The difference between the last record and the new record
