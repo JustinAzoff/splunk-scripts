@@ -15,15 +15,16 @@ ip_rex = re.compile(ipregex)
 
 def super_domains(host):
     """
+    FIXME
     >>> list(super_domains("a.b.com"))
     {'host': '*.b.com', 'parts': 2}, {'host': '*.com', 'parts': 1}]
     >>> list(super_domains("1.2.3.4"))
     [{'host': '1.2.3.*', 'parts': 3}, {'host': '1.2.*', 'parts': 2}, {'host': '1.*', 'parts': 1}]
     """
 
-
     parts = host.split(".")
     num_parts = len(parts)
+    yield dict(superhost=host, parts=num_parts)
     if ip_rex.match(host):
         for x in range(1,4):
             host = '.'.join(parts[:-x]) + '.*'
@@ -40,14 +41,13 @@ try:
     field = options.get('field', 'hostname')
 
     results,dummyresults,settings = splunk.Intersplunk.getOrganizedResults()
-    new_results = []
+    newresults = []
     for r in results:
         if field not in r:
             continue
-        newresults.append(r)
-        for info in superdomains(r['field']):
+        for info in super_domains(r[field]):
             info.update(r)
-            newresults.append(r)
+            newresults.append(info)
 except:
     import traceback
     stack =  traceback.format_exc()
