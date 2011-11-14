@@ -41,7 +41,7 @@ try:
     num_parts = int(options.get('parts', 2))
 
     results,dummyresults,settings = splunk.Intersplunk.getOrganizedResults()
-    results = add_superhost(results, field, num_parts)
+    results = list(add_superhost(results, field, num_parts))
             
 except:
     import traceback
