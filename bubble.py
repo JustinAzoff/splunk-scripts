@@ -27,12 +27,12 @@ def super_domains(host):
     yield dict(superhost=host, parts=num_parts)
     if ip_rex.match(host):
         for x in range(1,4):
-            host = '.'.join(parts[:-x]) + '.*'
+            host = '.'.join(parts[:-x])
             p = num_parts - x
             yield dict(superhost=host, parts=p)
     else:
         for x in range(num_parts-1,0,-1):
-            host = '*.' + '.'.join(parts[-x:])
+            host = '.'.join(parts[-x:])
             p = x
             yield dict(superhost=host, parts=p)
 
