@@ -28,7 +28,7 @@ common_mappings = (
     ('^High Tech Computer Corp', 'HTC Corporation'),
     ('^Cisco.*Systems', 'Cisco'),
     ('Cisco.Linksys', 'Cisco-Linksys'),
-
+    ('^Dell ', 'Dell'),
 )
 
 def get_file():
