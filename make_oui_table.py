@@ -26,6 +26,8 @@ common_mappings = (
     ('^RIM Testing Services', 'Research In Motion'),
     ('^AzureWave Technologies', 'AzureWave Technologies'),
     ('^High Tech Computer Corp', 'HTC Corporation'),
+    ('^Cisco.*Systems', 'Cisco'),
+    ('Cisco.Linksys', 'Cisco-Linksys'),
 
 )
 
