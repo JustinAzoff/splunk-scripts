@@ -17,7 +17,7 @@ URL="http://standards.ieee.org/regauth/oui/oui.txt"
 common_mappings = (
     ('^apple[, ]', 'Apple'),
     ('^Hon Hai Precision', 'Hon Hai Precision Ind.'),
-    ('^Intel', 'Intel'),
+    ('^Intel ', 'Intel'),
     ('^Gemtek Technology', 'Gemtek Technology'),
     ('^askey ', 'Askey computer corp'),
     ('^LITE-ON Technology Corp', 'Liteon Technology Corporation'),
