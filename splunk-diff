@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+import datetime
+import difflib
+import sys
+import re
+
+
+def lines(fn):
+    return open(fn).readlines()
+
+def want(line):
+    if re.search("^[+-][^+-]{2}", line):
+        return True
+
+def change(line):
+    rest = line[1:].rstrip()
+
+    if line[0] == '+':
+        return "added", rest
+
+    if line[0] == '-':
+        return "removed", rest
+
+def show_diff(a, b):
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    diff = difflib.unified_diff(lines(a), lines(b))
+    for line in filter(want, diff):
+        op, what = change(line)
+        print "%s %s %s" % (now, op, what)
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3:
+        sys.stderr.write("Usage: %s file1 file2\n" % sys.argv[0])
+        sys.exit(1)
+    a = sys.argv[1]
+    b = sys.argv[2]
+    show_diff(a,b)
