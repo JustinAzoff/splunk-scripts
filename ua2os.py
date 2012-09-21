@@ -38,7 +38,7 @@ browser_mapping = (
     ('i(pod|pad|phone).*(Safari|AppleWebKit)', 'Safari - mobile'),
     ('Safari/',             'Safari'),
     ('iTunes',              'iTunes'),
-    ('Firefox/(\d)',        'Firefox %s'),
+    ('Firefox/(\d+)',        'Firefox %s'),
     ('MSIE 5.00',           'Internet Explorer 5.0'),
     ('MSIE',                'Internet Explorer - Other'),
     ('AppleWebKit',         'Safari'),
@@ -46,6 +46,17 @@ browser_mapping = (
     ('Opera',               'Opera'),
     ('urlgrabber/.* yum',   'yum'),
     ('BlackBerry',          'Blackberry'),
+    ('Googlebot',           'Googlebot'),
+    ('Baiduspider',         'Baidubot'),
+    ('NING/\d',             'Ning'),
+    ('msnbot/\d',           'msnbot'),
+    ('gsa-crawler',         'Google Search Appliance'),
+    ('Ezooms/\d',           'Ezooms'),
+    ('bingbot',             'bingbot'),
+    ('YandexBot',           'yandexbot'),
+    ('Genieo',              'genieo'),
+    ('Apple-PubSub',        'Apple PubSub'),
+    ('Java/\d',             'Java'),
 )
 
 arch_mapping = (
