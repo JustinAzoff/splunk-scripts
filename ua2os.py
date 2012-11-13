@@ -9,6 +9,7 @@ os_mapping = (
     ('Windows NT 6.0',      'Windows Vista'),
     ('Windows 6.0',         'Windows Server 2008'),
     ('Windows NT 6.1',      'Windows 7'),
+    ('Windows NT 6.2',      'Windows 8'),
     ('OS X 10.(\d)',        'MAC OS X 10.%s.x'),
     ('SunOS',               'Solaris'),
     ('droid',               'Android'),
@@ -31,7 +32,7 @@ os_mapping = (
 
 browser_mapping = (
     ('MSIE 7.*Trident/4.0', 'Internet Explorer 8.0'),
-    ('MSIE ([9876]).0',     'Internet Explorer %s.0'),
+    ('MSIE ([0-9]{1,2}).0', 'Internet Explorer %s.0'),
     ('droid',               'Android'),
     ('Chrome',              'Chrome'),
     ('Mobile.*Safari',      'Safari - mobile'),
@@ -61,6 +62,7 @@ arch_mapping = (
     ('iPhone',              'iphone'),
     ('Intel',               'Intel'),
     ('BlackBerry',          'BlackBerry'),
+    ('ARM',                 'ARM'),
 )
 
 os_mapping      = [(re.compile(a, re.IGNORECASE),b) for (a,b) in os_mapping]
