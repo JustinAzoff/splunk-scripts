@@ -38,13 +38,13 @@ def get_file():
 
 def get_hex_records(data):
     for line in data:
-        if 'hex' in line:
+        if '(hex)' in line:
             yield line
 
 def parse_records(hex):
     for x in hex:
         parts = x.split("\t")
-        mac = parts[0][:8].replace("-",":").lower()
+        mac = parts[0].split()[0].replace("-",":").lower()
         owner  = fix_owner(parts[2])
         yield mac, owner
 
