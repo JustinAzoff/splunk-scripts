@@ -43,7 +43,7 @@ browser_mapping = (
     ('MSIE 7.*Trident/4.0', 'Internet Explorer 8.0'),
     ('MSIE ([9876]).0',     'Internet Explorer %s.0'),
     ('MSIE 10.0',           'Internet Explorer 10.0'),
-    ('Trident/7.0; rv:11.0','Internet Explorer 11.0'),
+    ('Trident/7.0; (?:Touch; )?rv:11.0','Internet Explorer 11.0'),
     ('droid',               'Android'),
     ('Chrome',              'Chrome'),
     ('Mobile.*Safari',      'Safari - mobile'),
